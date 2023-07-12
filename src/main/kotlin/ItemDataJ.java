@@ -29,11 +29,11 @@ public class ItemDataJ {
 
         } else if (this.originalValue instanceof Integer) {
 
-            if (((Integer)this.originalValue % 10) == 0) {
+            if ((Integer)this.originalValue % 10 == 0) {
                 return "M10";
-            } else if (((Integer)this.originalValue % 5) == 0) {
+            } else if ((Integer)this.originalValue % 5 == 0) {
                 return "M5";
-            } else if (((Integer)this.originalValue % 2) == 0) {
+            } else if ((Integer)this.originalValue % 2 == 0) {
                 return "M2";
             } else {
                 return null;

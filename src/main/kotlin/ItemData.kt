@@ -14,9 +14,22 @@ class ItemData(val originalValue: Any) {
         if (originalValue is String) {
             return "L${originalValue.length}"
         } else if (originalValue is Int) {
-            return when(originalValue){
-                % 10 == 0 ->
+            if (originalValue % 10 == 0) {
+                return "M10"
+            } else if (originalValue % 5 == 0) {
+                return "M5"
+            } else if (originalValue % 2 == 0) {
+                return "M2"
+            } else {
+                return null!!
             }
+        } else if (originalValue is Boolean) {
+            return when(originalValue) {
+                true -> "Verdadero"
+                else -> {"Falso"}
+            }
+        } else {
+            return null!!
         }
     }
 }
