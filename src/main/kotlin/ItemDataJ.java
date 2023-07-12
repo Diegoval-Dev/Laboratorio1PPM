@@ -14,7 +14,7 @@ public class ItemDataJ {
         } else if (this.originalValue instanceof Integer) {
             return "entero";
         } else if (this.originalValue instanceof Boolean){
-            return "boolean";
+            return "booleano";
         } else {
             return null;
         }

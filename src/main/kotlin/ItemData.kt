@@ -4,7 +4,7 @@ class ItemData(val originalValue: Any) {
         return when(originalValue){
             is String -> "cadena"
             is Int -> "entero"
-            is Boolean -> "boolean"
+            is Boolean -> "booleano"
             else -> null!!
         }
     }
