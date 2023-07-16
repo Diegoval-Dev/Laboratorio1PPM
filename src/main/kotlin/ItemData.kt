@@ -1,15 +1,15 @@
-class ItemData(val originalValue: Any) {
+class ItemData(val originalValue: Any?) {
 
-    fun getType(): String {
+    fun getType(): String? {
         return when(originalValue){
             is String -> "cadena"
             is Int -> "entero"
             is Boolean -> "booleano"
-            else -> null!!
+            else -> null
         }
     }
 
-    fun getInfo(): String {
+    fun getInfo(): String? {
 
         if (originalValue is String) {
             return "L${originalValue.length}"
@@ -21,7 +21,7 @@ class ItemData(val originalValue: Any) {
             } else if (originalValue % 2 == 0) {
                 return "M2"
             } else {
-                return null!!
+                return null
             }
         } else if (originalValue is Boolean) {
             return when(originalValue) {
@@ -29,7 +29,7 @@ class ItemData(val originalValue: Any) {
                 else -> {"Falso"}
             }
         } else {
-            return null!!
+            return null
         }
     }
 }
